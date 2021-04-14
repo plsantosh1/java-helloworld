@@ -27,7 +27,7 @@ pipeline {
                 //build job: 'Deploy_Application_Prod_Env'
             //}
         //}
-        Stage('Build Docker Image'){
+        stage('Build Docker Image'){
             steps {
                 sh "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
             }
